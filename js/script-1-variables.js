@@ -86,11 +86,27 @@ document.write('Año: ' + anioActual)
 //!   VENTANAS EMERGENTES
 //  Usamos ventanas emergentes para interactuar con el usuario
 
-alert('Esto es una ventana emergente')
+/* alert('Esto es una ventana emergente')
 
 
 
-//  Además podemos guardar en variables datos que pediremos al usuario
+  *Además podemos guardar en variables datos que pediremos al usuario
 
-// let color = prompt('Escribe tu color preferido')
+let color = prompt('Escribe tu color preferido')
 console.log(color);
+*/
+
+
+//  Solicitar al usuario un número, y al número indicado por el usuario multiplicarle 15
+let numUsuario = parseInt(prompt('Ingrese un número de 1 a 100'))
+console.log(numUsuario);
+console.log(numUsuario + 15);
+
+/*  
+Al hacer una suma, JS concatenará los valores ya que toma el return del prompt como un string. Para solucionar esto, debo parsear los valores:
+
+parseInt('10') devuelve 10 (funciona solo para números enteros)
+parseFloat('10.5') devuelve 10.5 (se puede aplicar a números decimales)
+*/  
+
+//  En caso que el usuario ingrese texto, parseInt no sabe interpretarlo y retorna NaN (Not a Number)
