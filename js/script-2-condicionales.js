@@ -13,9 +13,9 @@ const num1 = parseInt(prompt('Ingrese un número'))
 const num2 = parseInt(prompt('Ingrese otro número'))
 
 if(num1 > num2){
-  console.log('El número ' + num1 + ' es mayor que ' + num2);
+  document.write(`El número ${num1} es mayor que ${num2}`);
 } else if(num2 > num1){
-  console.log('El número ' + num2 + ' es mayor que ' + num1);
+  document.write(`El número ${num2} es mayor que ${num1}`);
 } else{
-  console.log('Los números ingresados son iguales (' + num1 + ')');
+  document.write(`Los números ingresados son iguales (${num1})`);
 }
