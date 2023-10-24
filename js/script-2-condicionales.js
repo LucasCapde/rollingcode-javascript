@@ -7,7 +7,7 @@ if(condición lógica){
 }
 */
 
-//  Ejercicio: Escribe un programa que pida 2 números y escriba en la pantalla el mayor de los tres.
+//  Ejercicio: Escribe un programa que pida 3 números y escriba en la pantalla el mayor de los tres.
 
 const num1 = parseInt(prompt('Ingrese un número'))
 const num2 = parseInt(prompt('Ingrese otro número'))
