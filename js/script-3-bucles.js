@@ -45,6 +45,6 @@ for(inicializar una variable; condición lógica; incrementar o decrementar la v
 }
 */
 
-for(let contador = 5; contador > 0; contador--){
-  document.write(`<p>Cuenta regresiva: ${contador}</p>`)
-}
+// for(let contador = 5; contador > 0; contador--){
+//   document.write(`<p>Cuenta regresiva: ${contador}</p>`)
+// }
