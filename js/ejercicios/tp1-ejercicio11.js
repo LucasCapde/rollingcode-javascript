@@ -10,11 +10,21 @@ Output: El 210 es divisible por 2, por 3, por 5 y por 7.
 
 */
 
-let num = parseInt(prompt('Ingrese un número'))
-let divisores = [2, 3, 5, 7]
+const num = parseInt(prompt('Ingrese un número'))
 
-for (let i = 0; i < divisores.length; i++) {
-  if(num % divisores[i] === 0){
-    document.write('El número es divisible por ' + divisores[i] + '<br>');
+if (num % 2 !== 0 && num % 3 !== 0 && num % 5 !== 0 && num % 7 !== 0) {
+  document.write('El número NO es divisible por 2, ni por 3, ni por 5 ni por 7');
+} else{
+  if(num % 2 === 0){
+    document.write('El número es divisible por 2' + '<br>');
+  }  
+  if(num % 3 === 0){
+    document.write('El número es divisible por 3' + '<br>');
+  }  
+  if(num % 5 === 0){
+    document.write('El número es divisible por 5' + '<br>');
+  }  
+  if(num % 7 === 0){
+    document.write('El número es divisible por 7' + '<br>');
   }
 }
