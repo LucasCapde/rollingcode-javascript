@@ -8,32 +8,22 @@ Output: oauo
 */
 
 let frase = prompt('Ingrese una palabra o frase')
-console.log(frase.length);
-console.log(frase.charAt(0));
-
+frase = frase.toLowerCase()
 //  Hola mundo
 //  Escribe un programa
 
-if(
-    frase.charAt(0) === 'a' || 
-    frase.charAt(0) === 'á' || 
-    frase.charAt(0) === 'A' || 
-    frase.charAt(0) === 'Á' || 
-    frase.charAt(0) === 'e' || 
-    frase.charAt(0) === 'é' || 
-    frase.charAt(0) === 'E' || 
-    frase.charAt(0) === 'É' || 
-    frase.charAt(0) === 'i' || 
-    frase.charAt(0) === 'í' || 
-    frase.charAt(0) === 'I' || 
-    frase.charAt(0) === 'Í' || 
-    frase.charAt(0) === 'o' || 
-    frase.charAt(0) === 'ó' || 
-    frase.charAt(0) === 'O' || 
-    frase.charAt(0) === 'Ó' || 
-    frase.charAt(0) === 'u' ||
-    frase.charAt(0) === 'ú' ||
-    frase.charAt(0) === 'U' ||
-    frase.charAt(0) === 'Ú'){
-      document.write(frase.charAt(0))
+for (let i = 0; i < frase.length; i++) {
+  if(
+    frase.charAt(i) === 'a' || 
+    frase.charAt(i) === 'á' || 
+    frase.charAt(i) === 'e' || 
+    frase.charAt(i) === 'é' || 
+    frase.charAt(i) === 'i' || 
+    frase.charAt(i) === 'í' || 
+    frase.charAt(i) === 'o' || 
+    frase.charAt(i) === 'ó' || 
+    frase.charAt(i) === 'u' ||
+    frase.charAt(i) === 'ú'){
+      document.write(frase.charAt(i))
+    }
 }
