@@ -40,7 +40,6 @@ do {
     case 'saldo':
     case '1':
       document.write(`Su saldo actual es $${saldo} <br>`)
-      console.log(`Su saldo actual es $${saldo} <br>`)
       break
     case '2':
       const deposito = parseFloat(prompt('Ingrese el monto que desea depositar'))
@@ -51,7 +50,6 @@ do {
       if(!isNaN(deposito) && deposito > 0){
         saldo += deposito
         document.write(`Su saldo actual es $${saldo}`)
-        console.log(`Su saldo actual es $${saldo}`)
       } else{
         alert('Usted ingresó un monto no válido')
       }
