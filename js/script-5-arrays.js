@@ -36,6 +36,9 @@ for(let i = 0; i < peliculas.length; i++){
 document.write(`</ul>`)
 
 
+
+
+
 //!  Agregando elementos a un array
 //*  Agregar al principio:
 peliculas.unshift('El Grinch', 'Mi pobre angelito')
@@ -63,6 +66,62 @@ document.write(`</ul>`)
 peliculas.push('Troya')
 
 document.write(`<h2>Lista de películas + 1 elemento (${peliculas.length}):</h2>`)
+document.write(`<ul>`)
+for(let i = 0; i < peliculas.length; i++){
+  document.write(`<li>${peliculas[i]}</li>`)
+}
+document.write(`</ul>`)
+
+
+
+
+
+//!  Modificando elementos de un array
+peliculas[7] = 'El padrino'
+
+document.write(`<h2>Lista de películas, modifico 1 elemento (${peliculas.length}):</h2>`)
+document.write(`<ul>`)
+for(let i = 0; i < peliculas.length; i++){
+  document.write(`<li>${peliculas[i]}</li>`)
+}
+document.write(`</ul>`)
+
+
+
+
+
+//! Eliminando elementos de un array
+//* Eliminar el primer elemento
+
+peliculas.shift()
+
+document.write(`<h2>Lista de películas, elimino 1 elemento (${peliculas.length}):</h2>`)
+document.write(`<ul>`)
+for(let i = 0; i < peliculas.length; i++){
+  document.write(`<li>${peliculas[i]}</li>`)
+}
+document.write(`</ul>`)
+
+
+//* Eliminar un elemento de alguna posición del medio
+
+peliculas.splice(7, 1)
+// peliculas.splice(2, 3)   Elimino 3 elementos desde la posición 2
+// peliculas.splice(2)    Elimino todo lo que esté después de la posición 2
+
+document.write(`<h2>Lista de películas, elimino 1 elemento (${peliculas.length}):</h2>`)
+document.write(`<ul>`)
+for(let i = 0; i < peliculas.length; i++){
+  document.write(`<li>${peliculas[i]}</li>`)
+}
+document.write(`</ul>`)
+
+
+//* Eliminar el último elemento del array
+
+peliculas.pop()
+
+document.write(`<h2>Lista de películas, elimino 1 elemento (${peliculas.length}):</h2>`)
 document.write(`<ul>`)
 for(let i = 0; i < peliculas.length; i++){
   document.write(`<li>${peliculas[i]}</li>`)
