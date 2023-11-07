@@ -21,6 +21,15 @@ const mostrarPeliculas = (titulo) => {
   document.write(`</ul>`)
 }
 
+const mostrarPeliculasNuevas = (arrayPeliculas, titulo) => {
+  document.write(`<h2>Lista de películas ${titulo}:</h2>`)
+
+  //  Ejemplo de método map
+  document.write(`<ul>`)
+  arrayPeliculas.map((item) => document.write(`<li>${item}</li>`))
+  document.write(`</ul>`)  
+}
+
 
 
 
@@ -98,3 +107,28 @@ mostrarPeliculas(`- Elimino 1 elemento (${peliculas.length})`)
 
 peliculas.pop()
 mostrarPeliculas(`- Elimino 1 elemento (${peliculas.length})`)
+
+
+
+//*  Agregar un par de pelis
+
+peliculas.push('Ironman 2', 'Ironman 3', 'Rocky', 'Rocky 2', 'Rocky 3')
+mostrarPeliculas(`- Agrego elementos (${peliculas.length})`)
+
+
+
+//*  Filtrar todos los elementos del arreglo
+
+const peliculasIronman = peliculas.filter((pelicula) => pelicula.includes ('Ironman'))
+mostrarPeliculasNuevas(peliculasIronman, 'Películas de Ironman')
+
+
+
+//* Método find:
+const peliculaBuscada = peliculas.find((item) => item === 'Harry Potter')
+const peliculaBuscada2 = peliculas.find((item) => item === 'Batman')
+console.log(peliculaBuscada);
+document.write(`<p>Película buscada: ${peliculaBuscada}</p>`)
+
+//  Podría modificar el resultado undefinded con if-else o un operador ternario         
+document.write(`<p>Segunda película buscada (Batman): ${peliculaBuscada2}</p>`)
