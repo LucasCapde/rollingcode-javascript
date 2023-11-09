@@ -127,8 +127,26 @@ mostrarPeliculasNuevas(peliculasIronman, 'Películas de Ironman')
 //* Método find:
 const peliculaBuscada = peliculas.find((item) => item === 'Harry Potter')
 const peliculaBuscada2 = peliculas.find((item) => item === 'Batman')
-console.log(peliculaBuscada);
+const peliculaBuscada3 = peliculas.find((item) => item === 'Rocky')
+const peliculaBuscada4 = peliculas.find((item) => item === 'BladeRunner')
 document.write(`<p>Película buscada: ${peliculaBuscada}</p>`)
 
 //  Podría modificar el resultado undefinded con if-else o un operador ternario         
 document.write(`<p>Segunda película buscada (Batman): ${peliculaBuscada2}</p>`)
+
+
+
+//* Operador ternario:
+/*  
+Es una forma de condicional más corta:
+(condición lógica) ? el código si es verdadera la condición : el código si es falsa la condición
+*/
+//  Caso 1: Guardando el ternario en una variable
+const respuestaTernario = (peliculaBuscada2 !== undefined) ? peliculaBuscada2 : 'No se encontró la película buscada';
+document.write(`<p>Segunda película buscada (Batman): ${respuestaTernario}</p>`)
+
+const respuestaTernario2 = (peliculaBuscada3 !== undefined) ? peliculaBuscada3 : 'No se encontró la película buscada';
+document.write(`<p>Segunda película buscada (Rocky): ${respuestaTernario2}</p>`)
+
+//  Caso 2: Usar el ternario dentro del mismo document.write
+document.write(`<p>Segunda película buscada (BladeRunner): ${(peliculaBuscada4 !== undefined) ? peliculaBuscada4 : 'No se encontró la película buscada'}</p>`)
