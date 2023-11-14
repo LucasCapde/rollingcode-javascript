@@ -37,10 +37,53 @@ class Pokemon{
   }
 
   //*  Métodos
+  mostrarDatos(){
+    document.write(`
+    <h2>Pokemon: ${this.nombre}</h2>
+    <ul>
+      <li>Nivel: ${this.nivel}</li>
+      <li>Número en Pokedex: ${this.numPokedex}</li>
+      <li>Tipo: ${this.tipo}</li>
+      <li>Ataques: ${this.ataques}</li>
+    </ul>
+    `)
+  }
 }
 
+
+
+//* Nueva clase (heredera de la clase anterior)
+class PokemonLegendario extends Pokemon{
+  constructor(nombre, nivel, numPokedex, tipo, ataques, ataquesEspeciales){
+    //  Puedo invocar al constructor de la Clase Padre
+    super(nombre, nivel, numPokedex, tipo, ataques)
+    this.ataquesEspeciales = ataquesEspeciales
+    this.rareza = 'Único'
+  }
+  //  Get y Set
+
+  //  Métodos
+  mostrarDatos(){
+    //  super.mostrarDatos()
+    document.write(`
+    <h2>Pokemon: ${this.nombre}</h2>
+    <ul>
+      <li>Nivel: ${this.nivel}</li>
+      <li>Número en Pokedex: ${this.numPokedex}</li>
+      <li>Tipo: ${this.tipo}</li>
+      <li>Ataques: ${this.ataques}</li>
+      <li>Ataques especiales: ${this.ataquesEspeciales}</li>
+      <li>Rareza: ${this.rareza}</li>
+    </ul>
+    `)
+  }
+}
+
+
+
+
 //* Creando/instanciando el objeto
-const bulbasaur = new Pokemon('Bulbasaur', 5, 1, 'planta', ['hojas', 'latigo cepa', 'placaje'])
+const bulbasaur = new Pokemon('Bulbasaur', 5, 1, 'Planta', ['hojas', 'latigo cepa', 'placaje'])
 console.log(bulbasaur);
 
 //  Propiedad pública
@@ -51,3 +94,18 @@ document.write(`<p>Nivel: ${bulbasaur.nivel}</p>`) // No lo encuentra
 //  Modificar un valor con un setter
 bulbasaur.nivel = 7
 document.write(`<p>Nivel: ${bulbasaur.nivel}</p>`) // No lo encuentra
+
+bulbasaur.mostrarDatos()
+
+
+//! Nuevo objeto:
+const charmander = new Pokemon('Charmander', 3, 4, 'Fuego', ['arañazo', 'bola de humo', 'ascuas'])
+
+charmander.mostrarDatos()
+
+
+
+//! Objeto heredado
+const mewtwo = new PokemonLegendario('Mewtwo', 100, 150, 'Psíquico', ['Confusión','psicocorte'], ['Psico-Quiebre'])
+
+mewtwo.mostrarDatos()
